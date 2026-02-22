@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Wall of Salvation Evangelical Ministry</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; background: #0f172a; color: white; }
+        
+        /* Transitions between pages */
+        .page-content { display: none; }
+        .page-active { display: block; animation: fadeIn 0.5s ease-in-out; }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .hero-bg {
+            background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.85)), 
+                        url('https://images.unsplash.com/photo-1438232992991-995b7058bbb3?auto=format&fit=crop&w=1500&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="flex justify-between items-center p-6 bg-slate-950/90 backdrop-blur-md sticky top-0 z-[100] border-b border-white/10">
+        <div class="font-black text-xl text-yellow-500 cursor-pointer" onclick="showPage('home')">
+            THE WALL <span class="text-white text-[10px] block opacity-70 uppercase tracking-widest">Of Salvation. Evangelical MINISTRY</span>
+        </div>
+        
+        <div class="flex items-center space-x-3 md:space-x-6 text-[10px] md:text-xs font-bold uppercase tracking-widest">
+            <button onclick="showPage('home')" class="hover:text-yellow-500 transition">Home</button>
+            <button onclick="showPage('about')" class="hover:text-yellow-500 transition">Overseer</button>
+            <button onclick="showPage('programs')" class="hover:text-yellow-500 transition">Programs</button>
+            <button onclick="showPage('testimonies')" class="hover:text-yellow-500 transition">Testimonies</button>
+            <button onclick="showPage('prayer')" class="bg-yellow-600 text-slate-900 px-3 py-2 rounded-lg font-black">PRAYER</button>
+        </div>
+    </nav>
+
+    <main id="home" class="page-content page-active">
+        <header class="h-[80vh] flex flex-col items-center justify-center text-center px-6 hero-bg">
+            <h1 class="text-5xl md:text-8xl font-black mb-4 uppercase tracking-tighter leading-none">Power & <br><span class="text-yellow-500">Salvation</span></h1>
+            <p class="text-lg md:text-xl text-slate-300 max-w-2xl mx-auto italic mb-10">Akankan Area, Trex Lounge Bar, Beside Right Star School, Osun State.</p>
+            
+            <div class="glass p-6 rounded-3xl mb-10">
+                <p class="text-yellow-500 text-[10px] font-bold uppercase tracking-widest mb-1">Next Monthly Revival Countdown (14th)</p>
+                <div id="countdown" class="text-4xl font-black tracking-tighter">Calculating...</div>
+            </div>
+
+            <div class="flex flex-wrap justify-center gap-4">
+                <button onclick="showPage('prayer')" class="bg-white text-slate-900 px-8 py-4 rounded-full font-black uppercase tracking-widest hover:bg-yellow-500 transition shadow-2xl">Send Prayer Request</button>
+                <button onclick="showPage('serve')" class="border-2 border-white/50 px-8 py-4 rounded-full font-black uppercase tracking-widest hover:bg-white hover:text-slate-900 transition">Join Workforce</button>
+            </div>
+        </header>
+    </main>
+
+    <main id="about" class="page-content py-20 px-6 max-w-6xl mx-auto">
+        <div class="flex flex-col md:flex-row items-center gap-12">
+            <img src="https://drive.google.com/thumbnail?id=11IOrqRBUxrIPEcJsTZ-wOonWEBS7OW_H&sz=w1000" 
+                 class="rounded-[3rem] shadow-2xl border-4 border-yellow-600 w-full md:w-1/2 aspect-square object-cover">
+            <div class="md:w-1/2">
+                <h4 class="text-yellow-500 font-bold tracking-widest uppercase mb-2">Our Spiritual Head</h4>
+                <h2 class="text-5xl font-black mb-6 uppercase leading-tight">The General Overseer</h2>
+                <p class="text-slate-300 text-xl leading-relaxed mb-6">Welcome to The Wall of Salvation Evangelical MINISTRY. We are a family called to be a refuge for the lost and a wall of fire for the saint. Join us as we spread the gospel and experience miracles through the power of the Holy Spirit.</p>
+                <div class="p-8 bg-slate-800 rounded-3xl italic border-l-8 border-yellow-500 text-xl text-slate-100">"God is our refuge and strength, a very present help in trouble."</div>
+            </div>
+        </div>
+    </main>
+
+    <main id="programs" class="page-content py-16 px-6 max-w-5xl mx-auto">
+        <h2 class="text-5xl font-black mb-12 uppercase text-center text-yellow-500 tracking-tighter">Service Schedule</h2>
+        <div class="grid md:grid-cols-2 gap-8 mb-10">
+            <div class="glass p-10 rounded-[2.5rem]">
+                <h3 class="font-bold text-yellow-500 uppercase mb-6 border-b border-white/10 pb-2 tracking-widest">Weekly Services</h3>
+                <ul class="space-y-4 text-lg">
+                    <li class="flex justify-between"><span>Sunday School:</span> <b>8:30am - 10:00am</b></li>
+                    <li class="flex justify-between text-yellow-500 font-bold"><span>Sunday Service:</span> <b>10:00am - 12:30pm</b></li>
+                    <li class="flex justify-between"><span>Wednesday Program:</span> <b>5:00pm - 7:30pm</b></li>
+                    <li class="flex justify-between opacity-50"><span>Sat Bible Study:</span> <b>4:00pm - 5:00pm</b></li>
+                    <li class="flex justify-between opacity-50"><span>Sat Choir Practice:</span> <b>5:00pm - 6:00pm</b></li>
+                </ul>
+            </div>
+            <div class="glass p-10 rounded-[2.5rem] border-l-8 border-yellow-600">
+                <h3 class="font-bold text-yellow-500 uppercase mb-6 border-b border-white/10 pb-2 tracking-widest">Revivals & Specials</h3>
+                <ul class="space-y-4 text-lg">
+                    <li><b>MONTHLY REVIVAL:</b> 14th, 15th, 16th</li>
+                    <li><b>MONTH-END REVIVAL:</b> Last Wed, Thurs, Fri</li>
+                    <li class="text-yellow-500"><b>CHURCH ANNIVERSARY:</b> JULY</li>
+                </ul>
+            </div>
+        </div>
+        <div class="bg-yellow-600 text-slate-950 p-10 rounded-[3rem] text-center shadow-2xl">
+            <h3 class="text-3xl font-black uppercase mb-2">Quarterly Marathon</h3>
+            <p class="text-xl font-bold italic underline">Every 3 Months: 24-Hour Power Program (7:00am - 7:00am Next Day)</p>
+        </div>
+    </main>
+
+    <main id="testimonies" class="page-content py-16 px-6 max-w-5xl mx-auto">
+        <h2 class="text-5xl font-black mb-4 uppercase text-center text-yellow-500 tracking-tighter">Testimonies</h2>
+        <p class="text-center text-slate-400 mb-12 italic text-lg">"And they overcame him by the blood of the Lamb and by the word of their testimony."</p>
+        
+        <div class="grid md:grid-cols-2 gap-8">
+            <div class="glass p-8 rounded-3xl relative overflow-hidden">
+                <div class="absolute top-0 right-0 p-4 opacity-10 font-black text-6xl">"</div>
+                <h4 class="font-black text-yellow-500 mb-2 uppercase">Miracle Healing</h4>
+                <p class="text-slate-300 leading-relaxed mb-4">God healed me of a long-term illness after the General Overseer prayed for me during the Monthly Revival. Praise God!</p>
+                <p class="text-xs font-bold text-white uppercase tracking-widest">- Sister Adeola</p>
+            </div>
+            <div class="glass p-8 rounded-3xl relative overflow-hidden border-r-4 border-yellow-600">
+                <div class="absolute top-0 right-0 p-4 opacity-10 font-black text-6xl">"</div>
+                <h4 class="font-black text-yellow-500 mb-2 uppercase">Financial Breakthrough</h4>
+                <p class="text-slate-300 leading-relaxed mb-4">I was unemployed for months, but after the Quarterly Marathon program, I received three job offers in one week!</p>
+                <p class="text-xs font-bold text-white uppercase tracking-widest">- Brother Samuel</p>
+            </div>
+        </div>
+
+        <div class="mt-16 bg-slate-800 p-8 rounded-[2rem] text-center">
+            <h3 class="font-black text-2xl mb-4">Have a Testimony?</h3>
+            <p class="mb-6 opacity-70">Share what God has done for you through this ministry.</p>
+            <a href="https://wa.me/2348161707688" class="inline-block bg-yellow-600 text-slate-900 px-8 py-3 rounded-full font-black uppercase tracking-widest">Share on WhatsApp</a>
+        </div>
+    </main>
+
+    <main id="prayer" class="page-content py-20 px-6 max-w-3xl mx-auto">
+        <h2 class="text-5xl font-black text-center mb-10 uppercase text-yellow-500 tracking-tighter">Prayer Request</h2>
+        <div class="glass p-10 rounded-[3rem]">
+            <form action="https://formsubmit.co/PASTE_YOUR_EMAIL_HERE@GMAIL.COM" method="POST" class="space-y-6">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_subject" value="🙏 NEW PRAYER REQUEST">
+                
+                <div>
+                    <label class="block text-[10px] font-bold text-yellow-500 uppercase tracking-widest mb-2 ml-2">Full Name</label>
+                    <input type="text" name="name" placeholder="Who are we praying for?" required class="w-full p-5 rounded-2xl bg-slate-800 border-none text-white outline-none focus:ring-4 focus:ring-yellow-500/20">
+                </div>
+                <div>
+                    <label class="block text-[10px] font-bold text-yellow-500 uppercase tracking-widest mb-2 ml-2">Phone / WhatsApp Number</label>
+                    <input type="tel" name="phone" placeholder="081..." required class="w-full p-5 rounded-2xl bg-slate-800 border-none text-white outline-none focus:ring-4 focus:ring-yellow-500/20">
+                </div>
+                <div>
+                    <label class="block text-[10px] font-bold text-yellow-500 uppercase tracking-widest mb-2 ml-2">Prayer Type / Request</label>
+                    <textarea name="prayer" rows="5" placeholder="Tell us what God should do for you..." required class="w-full p-5 rounded-2xl bg-slate-800 border-none text-white outline-none focus:ring-4 focus:ring-yellow-500/20"></textarea>
+                </div>
+                <button type="submit" class="w-full bg-white text-slate-950 font-black py-5 rounded-2xl hover:bg-yellow-500 transition uppercase tracking-[0.2em] text-lg shadow-2xl">Submit to Pastor</button>
+            </form>
+        </div>
+    </main>
+
+    <main id="serve" class="page-content py-20 px-6 max-w-3xl mx-auto">
+        <h2 class="text-4xl font-black text-center mb-10 uppercase">Register to Serve</h2>
+        <div class="glass p-10 rounded-[3rem]">
+            <form action="https://formsubmit.co/PASTE_YOUR_EMAIL_HERE@GMAIL.COM" method="POST" class="space-y-5">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="text" name="name" placeholder="Full Name" required class="w-full p-4 rounded-2xl bg-slate-800 border-none text-white outline-none">
+                <input type="tel" name="phone" placeholder="Phone Number" required class="w-full p-4 rounded-2xl bg-slate-800 border-none text-white outline-none">
+                <select name="department" class="w-full p-4 rounded-2xl bg-slate-800 border-none text-white outline-none">
+                    <option>Choir</option>
+                    <option>Ushering/Protocol</option>
+                    <option>Media/Technical</option>
+                    <option>Prayer Team</option>
+                </select>
+                <button type="submit" class="w-full bg-yellow-600 text-slate-900 font-black py-4 rounded-2xl hover:bg-yellow-500 transition uppercase tracking-widest">Register Now</button>
+            </form>
+        </div>
+    </main>
+
+    <section id="giving" class="py-20 bg-slate-950 px-6 border-t border-white/10 mt-20 text-center">
+        <h3 class="text-yellow-500 font-black uppercase tracking-[0.3em] mb-8 text-sm">Tithes & Offerings</h3>
+        <div class="glass p-10 rounded-[3rem] inline-block border-b-8 border-yellow-600">
+            <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-2">OPay Bank</p>
+            <h4 class="text-5xl font-mono font-black mb-2">8161707688</h4>
+            <p class="text-md font-bold opacity-60 uppercase">The Wall of Salvation Ministry</p>
+        </div>
+        <div class="mt-12 text-[10px] opacity-20 tracking-[0.5em] uppercase">© 2026 The Wall of Salvation Evangelical Ministry</div>
+    </section>
+
+    <a href="https://wa.me/2348161707688" target="_blank" class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-2xl z-[200] hover:scale-110 transition">
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 16 16"><path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/></svg>
+    </a>
+
+    <script>
+        function showPage(pageId) {
+            document.querySelectorAll('.page-content').forEach(p => p.classList.remove('page-active'));
+            document.getElementById(pageId).classList.add('page-active');
+            window.scrollTo(0,0);
+        }
+
+        function updateCountdown() {
+            const now = new Date();
+            let year = now.getFullYear();
+            let month = now.getMonth();
+            let revivalDate = new Date(year, month, 14, 0, 0, 0);
+            if (now > revivalDate) revivalDate = new Date(year, month + 1, 14, 0, 0, 0);
+            const diff = revivalDate - now;
+            const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            document.getElementById('countdown').innerHTML = d + "d " + h + "h " + m + "m";
+        }
+        setInterval(updateCountdown, 1000); updateCountdown();
+    </script>
+</body>
+</html>
